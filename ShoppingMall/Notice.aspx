@@ -7,10 +7,7 @@
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="num" DataSourceID="SqlDataSource1">
                 <Columns>
 
-                     <asp:BoundField DataField="num" HeaderText="No" InsertVisible="False" ReadOnly="True" SortExpression="Id">
-                         <HeaderStyle Width="30px" />
-
-                     </asp:BoundField>
+              
 
                     <asp:TemplateField HeaderText="제목">
                         <ItemTemplate>
@@ -23,8 +20,8 @@
                     </asp:TemplateField>
 
                    
-                   <asp:BoundField DataField="name" HeaderText="이름" SortExpression="name">
-                          <HeaderStyle Width="80px" />
+                    <asp:BoundField DataField="name" HeaderText="이름" SortExpression="name">
+                        <HeaderStyle Width="80px" />
                     </asp:BoundField>
                     <asp:BoundField DataField="writedate" HeaderText="올린날짜" SortExpression="writedate">
 
@@ -50,9 +47,9 @@
         <asp:TextBox ID="txtSearch" runat="server" Height="16px" Width="645px"></asp:TextBox>
 
 
-        <asp:Button ID="btnSearch1" runat="server" Text="검색" OnClick="btnSearch1_Click" />
+        <asp:Button ID="btnSearch1" runat="server" Text="검색" OnClick="btnSearch1_Click" class="btn btn-outline-secondary"/>
         &nbsp;
-        <asp:Button ID="btnWrite" runat="server" Text="작성하기" OnClick="btnWrite_Click" style="height: 27px"  />
+        <asp:Button ID="btnWrite" runat="server" Text="작성하기" OnClick="btnWrite_Click"   class="btn btn-outline-secondary" />
   
 
 </asp:Content>

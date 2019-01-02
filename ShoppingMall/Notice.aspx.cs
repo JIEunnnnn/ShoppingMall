@@ -38,7 +38,7 @@ namespace ShoppingMall
         protected void btnWrite_Click(object sender, EventArgs e)
         {
 
-            Response.Redirect("~/Write.aspx");
+            Response.Redirect("~/Write2.aspx");
         }
 
     }

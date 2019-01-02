@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Ajax.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -14,11 +15,12 @@ namespace ShoppingMall
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+
             SqlConnection con = new SqlConnection();
             con.ConnectionString = ConfigurationManager.ConnectionStrings[
                 "ConnectionString"].ConnectionString;
@@ -31,13 +33,23 @@ namespace ShoppingMall
 
             cmd.Parameters.AddWithValue("@UserID", txtID.Text);
             cmd.Parameters.AddWithValue("@Password", txtPassword.Text);
+
+            cmd.Parameters.AddWithValue("@Name", txtName.Text);
+            cmd.Parameters.AddWithValue("@Age", Convert.ToInt32(txtAge.Text));
+
             cmd.ExecuteNonQuery();
 
             con.Close();
 
-            string strst = "<script>alert('가입완료');location.herf='Site.Master'; </script>";
+            string strst = "<script>alert('가입완료');document.location.herf='Login.aspx'; </script>";
 
             Page.ClientScript.RegisterClientScriptBlock(GetType(), "goDefault", strst);
+
+
+            Response.Redirect("Login.aspx"); 
+
         }
+
+      
     }
 }

@@ -8,22 +8,25 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace WebApplication1127
+namespace ShoppingMall
 {
     public partial class Modify : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                string source = "Server=(localdb)\\MSSQLlocalDB;Initial Catalog=tblboard;Integrated Security=True;";
-                
 
-                SqlConnection con = new SqlConnection(source);
-                con.Open();
+        
+
+          if (!IsPostBack)
+            {
+                string source = "Server=(localdb)\\MSSQLLocalDB;Initial Catalog = Users;Integrated Security = True;";
+
+
+        SqlConnection con = new SqlConnection(source);
+        con.Open();
 
                 SqlCommand cmd = new SqlCommand();
-                cmd.Connection = con;
+        cmd.Connection = con;
                 cmd.CommandText = "SELECT* FROM tblBoard WHERE num = " + Request["No"];
                 
                 cmd.ExecuteNonQuery();
@@ -34,10 +37,10 @@ namespace WebApplication1127
                 {
                     //데이터베이스에 있는 내용이 lblname.text로 쏙 들어옴
                     lblname.Text = dr["name"].ToString();
-                    txttitle.Text = dr["title"].ToString();
-                    txtContents.Text = dr["contents"].ToString();
-                }
-                dr.Close();
+        txttitle.Text = dr["title"].ToString();
+        txtContents.Text = dr["contents"].ToString();
+    }
+    dr.Close();
                 con.Close();
             }
          
@@ -46,26 +49,28 @@ namespace WebApplication1127
         }
 
         protected void btnModify_Click(object sender, EventArgs e)
-        {
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = ConfigurationManager.ConnectionStrings[
-                "ConnectionString"].ConnectionString;
-            con.Open();
+{
+    SqlConnection con = new SqlConnection();
+    con.ConnectionString = ConfigurationManager.ConnectionStrings[
+        "ConnectionString"].ConnectionString;
+    con.Open();
 
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
-            cmd.CommandText = "Update tblBoard Set title= '" + txttitle.Text + "', contents = '" + txtContents.Text + "' Where num = " + Request["No"];
-            cmd.CommandType = CommandType.Text;
-            cmd.ExecuteNonQuery();
+    SqlCommand cmd = new SqlCommand();
+    cmd.Connection = con;
+    cmd.CommandText = "Update tblBoard Set title= N'"
+      + txttitle.Text + "', contents = N'" + txtContents.Text + "' Where num = " + Request["No"];
+    cmd.CommandType = CommandType.Text;
+    cmd.ExecuteNonQuery();
 
-            con.Close();
+    con.Close();
 
-            Response.Redirect("~/List.aspx");
-        }
+    Response.Redirect("~/Notice.aspx");
+}
 
-        protected void btnReset_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("~/List.aspx");
-        }
+protected void btnReset_Click(object sender, EventArgs e)
+{
+    Response.Redirect("~/Notice.aspx");
+}
     }
 }
+    

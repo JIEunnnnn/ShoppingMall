@@ -126,18 +126,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Bottom.aspx" />
-    <Content Include="Bottom1.jpg" />
-    <Content Include="Bottom2.jpg" />
-    <Content Include="Bottom3.jpg" />
-    <Content Include="Find.aspx" />
+    <Content Include="Cart.aspx" />
+    <Content Include="Intro.aspx" />
+    <Content Include="listClick.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="list.aspx" />
+    <Content Include="Modify.aspx" />
+    <Content Include="Modifylogin.aspx" />
+    <Content Include="Password.aspx" />
+    <Content Include="Passwordlogin.aspx" />
+    <Content Include="Photo\childWatch.jpg" />
+    <Content Include="Photo\manWatch.jpg" />
+    <Content Include="Photo\womanWatch.jpg" />
+    <Content Include="Register.aspx" />
     <Content Include="Models\dbo.tblBoard.sql" />
     <Content Include="Models\dbo.Users.sql" />
     <Content Include="Models\writeBoard.sql" />
     <Content Include="Models\WriteUsers.sql" />
-    <Content Include="Modify.aspx" />
     <Content Include="Notice.aspx" />
-    <Content Include="Login.aspx" />
+    <Content Include="LoginPage.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -155,14 +162,11 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Write.aspx" />
+    <Content Include="View.aspx" />
+    <Content Include="watchMain.jpg" />
+    <Content Include="Write2.aspx" />
+    <Content Include="writelist.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
-    <Content Include="Outer.aspx" />
-    <Content Include="Outer1.jpg" />
-    <Content Include="Outer2.jpg" />
-    <Content Include="Outer3.jpg" />
-    <Content Include="Password.aspx" />
-    <Content Include="Register.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -192,11 +196,6 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
-    <Content Include="Top.aspx" />
-    <Content Include="BestItem.aspx" />
-    <Content Include="Top1.jpg" />
-    <Content Include="Top2.jpg" />
-    <Content Include="Top3.jpg" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -206,19 +205,40 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="Bottom.aspx.cs">
-      <DependentUpon>Bottom.aspx</DependentUpon>
+    <Compile Include="Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Bottom.aspx.designer.cs">
-      <DependentUpon>Bottom.aspx</DependentUpon>
+    <Compile Include="Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Find.aspx.cs">
-      <DependentUpon>Find.aspx</DependentUpon>
+    <Compile Include="Intro.aspx.cs">
+      <DependentUpon>Intro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Find.aspx.designer.cs">
-      <DependentUpon>Find.aspx</DependentUpon>
+    <Compile Include="Intro.aspx.designer.cs">
+      <DependentUpon>Intro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="listClick.aspx.cs">
+      <DependentUpon>listClick.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="listClick.aspx.designer.cs">
+      <DependentUpon>listClick.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="list.aspx.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="list.aspx.designer.cs">
+      <DependentUpon>list.aspx</DependentUpon>
     </Compile>
     <Compile Include="Modify.aspx.cs">
       <DependentUpon>Modify.aspx</DependentUpon>
@@ -226,6 +246,34 @@
     </Compile>
     <Compile Include="Modify.aspx.designer.cs">
       <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modifylogin.aspx.cs">
+      <DependentUpon>Modifylogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modifylogin.aspx.designer.cs">
+      <DependentUpon>Modifylogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Password.aspx.cs">
+      <DependentUpon>Password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Password.aspx.designer.cs">
+      <DependentUpon>Password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Passwordlogin.aspx.cs">
+      <DependentUpon>Passwordlogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Passwordlogin.aspx.designer.cs">
+      <DependentUpon>Passwordlogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="Notice.aspx.cs">
       <DependentUpon>Notice.aspx</DependentUpon>
@@ -235,12 +283,12 @@
       <DependentUpon>Notice.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -252,28 +300,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Outer.aspx.cs">
-      <DependentUpon>Outer.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Outer.aspx.designer.cs">
-      <DependentUpon>Outer.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Password.aspx.cs">
-      <DependentUpon>Password.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Password.aspx.designer.cs">
-      <DependentUpon>Password.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Register.aspx.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Register.aspx.designer.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -281,19 +308,12 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
-    <Compile Include="Top.aspx.cs">
-      <DependentUpon>Top.aspx</DependentUpon>
+    <Compile Include="View.aspx.cs">
+      <DependentUpon>View.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Top.aspx.designer.cs">
-      <DependentUpon>Top.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="BestItem.aspx.cs">
-      <DependentUpon>BestItem.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="BestItem.aspx.designer.cs">
-      <DependentUpon>BestItem.aspx</DependentUpon>
+    <Compile Include="View.aspx.designer.cs">
+      <DependentUpon>View.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
@@ -302,12 +322,19 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Write.aspx.cs">
-      <DependentUpon>Write.aspx</DependentUpon>
+    <Compile Include="Write2.aspx.cs">
+      <DependentUpon>Write2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Write.aspx.designer.cs">
-      <DependentUpon>Write.aspx</DependentUpon>
+    <Compile Include="Write2.aspx.designer.cs">
+      <DependentUpon>Write2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="writelist.aspx.cs">
+      <DependentUpon>writelist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="writelist.aspx.designer.cs">
+      <DependentUpon>writelist.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -1,22 +1,24 @@
-﻿<%@ Page Title="Contact" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="ShoppingMall.Contact" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="ShoppingMall.login" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <div>
+    
+        <h5>로그인 창</h5>
 
-<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
- 
-    <h2>쇼핑몰 회원인가요? </h2>
+        <table>
+            <tr>
+                <td> 아이디: </td>
+                <td> <asp:TextBox ID="txtUserID" runat="server"></asp:TextBox> </td>
 
-    아이디: <br />
-    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox> <br />
+            </tr>
 
-    비밀번호: <br /> 
-    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+            <tr>
+                <td> 암호:  </td>
+                <td>    <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>  </td>
 
-    <asp:Button ID="Button1" runat="server" Text="로그인" OnClick="Button1_Click" style="height: 26px" /> <br />
-
-    <br />
-    아이디/비밀번호를 밎어버렸다면
-    <asp:Button ID="Button2" runat="server" Text="아이디/비밀번호찾기" Height="24px" Width="181px" OnClick="Button2_Click" /> 
-    <br />
-    회원이 아니라면 
-    <asp:Button ID="Button3" runat="server" Text="회원가입" OnClick="Button3_Click" />
+            </tr>
+        </table>
+        
+        <asp:Button ID="btnLogin" runat="server" Text="로그인"  OnClick ="btnLogin_Click" class="btn btn-outline-secondary"/>
+    </div>
 
 </asp:Content>

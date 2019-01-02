@@ -39,33 +39,39 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/">지은's 쇼핑몰</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">상품조회</a></li> 
-                        <li><a runat="server" href="~/Notice">공지사항</a></li> 
-                                                                         
-                        <li><a runat="server" href="~/Login">로그인/회원가입</a></li> 
-                                                                       
-                    </ul>
-                </div>
-            </div>
-        </div>
+         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="default.aspx"><h5>해외직구 명품시계 쇼핑몰</h5> </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+             
+
+  <div class="collapse navbar-collapse" id="navbar">
+    <ul class="navbar-nav mr-auto">
+   
+      <li class="nav-item">
+        <a class="nav-link"  href="list.aspx"  >상품조회</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Notice.aspx"> Q&A</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"  href="LoginPage.aspx" >로그인/회원가입</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <h5>&copy; <%: DateTime.Now.Year %> - 소비자 만족도 1위 쇼핑몰 </h5>
+                <h6>&copy; <%: DateTime.Now.Year %> - 소비자 만족도 1위 쇼핑몰 </h6>
             </footer>
         </div>
 
